@@ -1,0 +1,25 @@
+SETUPEGIP OIL/MEXC — PWA PARA RENDER
+
+ARQUIVOS
+- index.html: SetupEgiP V13 adaptado para instalação no celular
+- manifest.json: configuração do aplicativo PWA
+- service-worker.js: cache dos arquivos locais
+- icon-192.png e icon-512.png: ícones do app
+
+PUBLICAR NO RENDER
+1. Envie estes arquivos para a raiz do repositório GitHub usado pelo projeto.
+2. No Render, crie/abra um Static Site ligado ao repositório.
+3. Publish Directory: use a raiz onde estes arquivos estão (normalmente .)
+4. Não é necessário comando de build se o projeto for somente HTML/CSS/JS.
+5. Faça o deploy.
+6. Abra a URL HTTPS do Render no Chrome do Android.
+7. Toque em “Instalar app” quando aparecer. Se não aparecer, menu ⋮ > Instalar app / Adicionar à tela inicial.
+8. Depois disso, o ícone “OIL MEXC” abre diretamente o index.html em modo aplicativo.
+
+ATUALIZAÇÃO
+- Ao substituir o index.html no GitHub e o Render fazer novo deploy, o app busca a versão nova ao ser aberto/conectado.
+- O Service Worker só controla arquivos locais do app; chamadas externas/API e conexão da MEXC não são cacheadas.
+
+IMPORTANTE
+- O app precisa ser servido via HTTPS para instalação PWA completa. O Render fornece HTTPS.
+- O serviço/servidor histórico usado no SetupEgiP precisa continuar acessível.
